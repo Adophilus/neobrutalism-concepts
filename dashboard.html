@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard | Neobrutalism</title>
+</head>
+
+<body class="h-screen grid grid-cols-12 font-archivo" x-data>
+  <aside class="overflow-y-scroll hidden xl:block h-full bg-black col-span-0 xl:col-span-3 p-8 space-y-8">
+    <div>
+      <header class="font-bold text-4xl text-white flex items-center gap-2">
+        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M20.183 9.61605H24.0267C24.1586 9.62506 24.2909 9.60687 24.4154 9.5626C24.54 9.51833 24.6541 9.44893 24.7507 9.35871C24.8472 9.2685 24.9243 9.15939 24.9769 9.03816C25.0296 8.91693 25.0567 8.78617 25.0567 8.654C25.0567 8.52183 25.0296 8.39107 24.9769 8.26984C24.9243 8.14861 24.8472 8.0395 24.7507 7.94928C24.6541 7.85906 24.54 7.78967 24.4154 7.7454C24.2909 7.70113 24.1586 7.68293 24.0267 7.69194H20.183C19.4185 7.69075 18.6856 7.38653 18.145 6.84595C17.6045 6.30536 17.3002 5.57252 17.2991 4.80802V0.959791C17.2824 0.715989 17.1738 0.487603 16.9952 0.3208C16.8166 0.153997 16.5814 0.0612183 16.337 0.0612183C16.0926 0.0612183 15.8574 0.153997 15.6788 0.3208C15.5002 0.487603 15.3916 0.715989 15.3749 0.959791V4.80802C15.3761 6.08282 15.8831 7.30507 16.7845 8.2065C17.6859 9.10792 18.9082 9.61487 20.183 9.61605Z"
+            fill="#42FF77" />
+          <path
+            d="M0.95979 9.61605H4.80801C6.08282 9.61486 7.30507 9.10792 8.2065 8.2065C9.10792 7.30507 9.61486 6.08282 9.61605 4.80801V0.95979C9.59939 0.715989 9.4908 0.487603 9.31221 0.3208C9.13362 0.153997 8.89837 0.0612183 8.654 0.0612183C8.40963 0.0612183 8.17437 0.153997 7.99578 0.3208C7.81719 0.487603 7.7086 0.715989 7.69194 0.95979V4.80801C7.69075 5.57251 7.38653 6.30536 6.84595 6.84595C6.30536 7.38653 5.57251 7.69075 4.80801 7.69194H0.95979C0.715989 7.7086 0.487603 7.81719 0.3208 7.99578C0.153997 8.17437 0.0612183 8.40963 0.0612183 8.654C0.0612183 8.89837 0.153997 9.13362 0.3208 9.31221C0.487603 9.4908 0.715989 9.59939 0.95979 9.61605Z"
+            fill="#42FF77" />
+          <path
+            d="M24.0357 15.3839H20.183C18.9113 15.3874 17.6927 15.8942 16.7934 16.7934C15.8942 17.6927 15.3874 18.9113 15.3839 20.183V24.0267C15.3749 24.1586 15.3931 24.2909 15.4374 24.4154C15.4816 24.5399 15.551 24.654 15.6412 24.7506C15.7315 24.8472 15.8406 24.9242 15.9618 24.9769C16.083 25.0296 16.2138 25.0567 16.346 25.0567C16.4781 25.0567 16.6089 25.0296 16.7301 24.9769C16.8513 24.9242 16.9605 24.8472 17.0507 24.7506C17.1409 24.654 17.2103 24.5399 17.2546 24.4154C17.2988 24.2909 17.317 24.1586 17.308 24.0267V20.183C17.3104 19.4212 17.614 18.6913 18.1527 18.1527C18.6913 17.614 19.4212 17.3104 20.183 17.308H24.0267C24.1586 17.317 24.2909 17.2988 24.4154 17.2546C24.5399 17.2103 24.654 17.1409 24.7506 17.0507C24.8472 16.9605 24.9242 16.8513 24.9769 16.7301C25.0296 16.6089 25.0567 16.4781 25.0567 16.346C25.0567 16.2138 25.0296 16.083 24.9769 15.9618C24.9242 15.8406 24.8472 15.7315 24.7506 15.6412C24.654 15.551 24.5399 15.4816 24.4154 15.4374C24.2909 15.3931 24.1586 15.3749 24.0267 15.3839H24.0357Z"
+            fill="#42FF77" />
+          <path
+            d="M4.80802 15.3839H0.959791C0.715989 15.4006 0.487603 15.5092 0.3208 15.6878C0.153997 15.8663 0.0612183 16.1016 0.0612183 16.346C0.0612183 16.5903 0.153997 16.8256 0.3208 17.0042C0.487603 17.1828 0.715989 17.2914 0.959791 17.308H4.80802C5.57097 17.3092 6.30246 17.6122 6.84279 18.1508C7.38312 18.6895 7.68839 19.42 7.69194 20.183V24.0267C7.68293 24.1586 7.70113 24.2909 7.7454 24.4154C7.78967 24.54 7.85906 24.6541 7.94928 24.7507C8.0395 24.8472 8.14861 24.9243 8.26984 24.9769C8.39107 25.0296 8.52183 25.0567 8.654 25.0567C8.78617 25.0567 8.91693 25.0296 9.03816 24.9769C9.15939 24.9243 9.2685 24.8472 9.35871 24.7507C9.44893 24.6541 9.51833 24.54 9.5626 24.4154C9.60687 24.2909 9.62506 24.1586 9.61605 24.0267V20.183C9.61249 18.9097 9.10451 17.6898 8.20334 16.7903C7.30217 15.8908 6.08127 15.3851 4.80802 15.3839Z"
+            fill="#42FF77" />
+          <path
+            d="M24.0357 11.5357H18.2678C17.636 11.5363 17.0103 11.4123 16.4265 11.171C15.8426 10.9296 15.3121 10.5755 14.8651 10.129C14.4182 9.6825 14.0636 9.15226 13.8217 8.56863C13.5798 7.985 13.4553 7.35942 13.4553 6.72764V0.95979C13.4386 0.715989 13.3301 0.487603 13.1515 0.3208C12.9729 0.153997 12.7376 0.0612183 12.4932 0.0612183C12.2489 0.0612183 12.0136 0.153997 11.835 0.3208C11.6564 0.487603 11.5478 0.715989 11.5312 0.95979V6.72764C11.5312 8.00203 11.0252 9.2243 10.1245 10.1259C9.22383 11.0274 8.00203 11.5345 6.72764 11.5357H0.95979C0.715989 11.5523 0.487603 11.6609 0.3208 11.8395C0.153997 12.0181 0.0612183 12.2534 0.0612183 12.4977C0.0612183 12.7421 0.153997 12.9774 0.3208 13.1559C0.487603 13.3345 0.715989 13.4431 0.95979 13.4598H6.72764C8.00281 13.4598 9.22575 13.9663 10.1274 14.868C11.0291 15.7697 11.5357 16.9927 11.5357 18.2678V24.0357C11.5267 24.1675 11.5449 24.2998 11.5891 24.4244C11.6334 24.5489 11.7028 24.663 11.793 24.7596C11.8832 24.8562 11.9923 24.9332 12.1136 24.9859C12.2348 25.0385 12.3656 25.0657 12.4977 25.0657C12.6299 25.0657 12.7607 25.0385 12.8819 24.9859C13.0031 24.9332 13.1122 24.8562 13.2025 24.7596C13.2927 24.663 13.3621 24.5489 13.4063 24.4244C13.4506 24.2998 13.4688 24.1675 13.4598 24.0357V18.2678C13.4598 16.9922 13.9662 15.7688 14.8678 14.8664C15.7693 13.9641 16.9922 13.4565 18.2678 13.4553H24.0357C24.1675 13.4643 24.2998 13.4461 24.4244 13.4018C24.5489 13.3576 24.663 13.2882 24.7596 13.198C24.8562 13.1077 24.9332 12.9986 24.9859 12.8774C25.0385 12.7562 25.0657 12.6254 25.0657 12.4932C25.0657 12.3611 25.0385 12.2303 24.9859 12.1091C24.9332 11.9879 24.8562 11.8787 24.7596 11.7885C24.663 11.6983 24.5489 11.6289 24.4244 11.5846C24.2998 11.5404 24.1675 11.5222 24.0357 11.5312V11.5357ZM12.5 14.8008C11.9289 13.8576 11.1379 13.0666 10.1946 12.4955C11.1379 11.9244 11.9289 11.1334 12.5 10.1901C13.0693 11.1345 13.8587 11.927 14.8008 12.5C13.8597 13.0704 13.0704 13.8597 12.5 14.8008Z"
+            fill="#42FF77" />
+        </svg>
+        NeoDash
+      </header>
+    </div>
+    <div class="grid gap-2">
+      <header>
+        <h3 class="text-white/50 px-5">Navigation</h3>
+      </header>
+      <template x-for="tab in $store.sidebar">
+        <button
+          class="text-white py-2.5 px-5 text-left hover:text-[#42FF77] transition-colors duration-250 hover:bg-[#161616] group flex items-center gap-2 font-semibold">
+          <i :class="tab.icon"></i>
+          <span x-text="tab.text"></span>
+        </button>
+      </template>
+    </div>
+    <div class="grid gap-2">
+      <header>
+        <h3 class="text-white/50 px-5">Team Members</h3>
+      </header>
+      <template x-for="tab in $store.teamMembers">
+        <button
+          class="text-white py-2.5 px-5 text-left hover:text-[#42FF77] transition-colors duration-250 hover:bg-[#161616] group flex items-center gap-2 font-semibold">
+          <img :src="tab.image" class="w-8 h-8 rounded-full object-cover"></img>
+          <span x-text="tab.name"></span>
+        </button>
+      </template>
+      <button
+        class="text-white py-2.5 px-5 text-left hover:text-[#42FF77] transition-colors duration-250 hover:bg-[#161616] group flex items-center gap-4 font-semibold">
+        <i class="fa-solid fa-chevron-down"></i>
+        See More
+      </button>
+    </div>
+  </aside>
+  <div class="col-span-12 xl:col-span-9 overflow-y-scroll bg-[#FAF4F0]">
+    <nav class="border-b-black border-b-2 py-4 px-4">
+      <div class="flex justify-between items-center mx-auto max-w-4xl">
+        <header>
+          <h1 class="text-3xl font-grotesque font-black">Products</h1>
+        </header>
+        <div class="flex gap-8 items-center">
+          <button>
+            <i class="fa-solid fa-bell text-lg"></i>
+          </button>
+          <button class="font-semibold flex items-center gap-2">
+            <i class="fa-solid fa-puzzle-piece text-lg"></i>
+            Apps
+          </button>
+          <button
+            class="border-black flex items-center gap-2 rounded-md border-[2px] py-2.5 px-5 font-semibold font-archivo bg-[#42FF77]">
+            <i class="fa-solid fa-circle-plus text-lg"></i>
+            Create new
+          </button>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <div class="px-4 py-8">
+        <div class="flex items-center justify-between max-w-4xl mx-auto">
+          <div class="flex gap-4">
+            <button
+              class="border-black flex items-center gap-2 rounded-md border-[2px] py-2.5 px-5 font-semibold font-archivo bg-[#42FF77]">
+              <i class="fa-solid fa-filter text-lg"></i>
+              All Filters
+            </button>
+            <button class="font-semibold flex items-center gap-2">
+              <i class="fa-solid fa-x"></i>
+              All Customers
+            </button>
+            <button class="font-semibold flex items-center gap-2">
+              <i class="fa-solid fa-x"></i>
+              A-Z
+            </button>
+          </div>
+          <div>
+            <button class="py-2 px-20 flex items-center gap-2 border-2 font-semibold border-black">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              Search
+            </button>
+          </div>
+        </div>
+        <div class="px-4 py-8">
+          <div class="max-w-4xl mx-auto overflow-x-auto">
+            <table class="bg-white w-full rounded-md border-2 border-black">
+              <thead class="border-b-2 border-b-black">
+                <th class="py-5 pl-4 pr-2">
+                  <!-- <input type="checkbox" /> -->
+                  <div class="flex items-center">
+                    <button class="border-2 p-2 rouded-md border-black"></button>
+                  </div>
+                </th>
+                <th class="text-left px-2">
+                  Product
+                  <i class="fa-solid fa-arrow-down text-lg"></i>
+                </th>
+                <th class="text-left px-2">
+                  Category
+                </th>
+                <th class="text-left px-2">
+                  Status
+                </th>
+                <th class="text-left px-2">
+                  Color
+                </th>
+                <th class="text-right px-2">
+                  Sales
+                </th>
+                <th class="text-right px-2">
+                  Price
+                </th>
+                <th class="pl-2 pr-4">
+                </th>
+              </thead>
+              <tbody>
+                <template x-for="product in $store.products">
+                  <tr class="border-b-2 border-b-black">
+                    <td class="pl-4 pr-2">
+                      <div class="flex items-center">
+                        <button class="border-2 p-2 rouded-md border-black"></button>
+                      </div>
+                    </td>
+                    <td class="px-2 flex items-center gap-2 py-2.5">
+                      <img src='/public/avocado-pear.jpg'
+                        class="aspect-video w-16 border-2 border-black object-cover" />
+                      <span class="font-semibold" x-text="product.name"></span>
+                    </td>
+                    <td class="px-2">
+                      <button class="text-center text-xs px-5 font-semibold rounded-md border-black border-2 py-1"
+                        x-text="product.category"></button>
+                    </td>
+                    <td class="px-2">
+                      <button
+                        :class="`rounded-md uppercase border-2 border-black py-1 px-3 text-xs font-semibold ${product.status === 'low' ? 'bg-red-400' : product.status === 'high' ? 'bg-emerald-400' : 'bg-yellow-400'}`"
+                        x-text="product.status"></button>
+                    </td>
+                    <td class="px-2">
+                      <span class='rounded-full border-2 border-black w-6 h-6 inline-block'
+                        :style="`background-color: ${product.color}`"></span>
+                    <td class="px-2">
+                      <span x-text="`${product.sales} pcs`"></span>
+                    </td>
+                    <td class="px-2">
+                      <span class="font-semibold" x-text="product.price + ' NGN'"></span>
+                    </td>
+                    <td class="pl-2 pr-4">
+                      <button>
+                        <i class="fa-solid fa-ellipsis"></i>
+                      </button>
+                    </td>
+                  </tr>
+                </template>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="px-4 py-4">
+          <div class="max-w-4xl mx-auto">
+            <div class="flex justify-between">
+              <button
+                class="border-black flex items-center gap-2 rounded-md border-[2px] py-2.5 px-5 font-semibold font-archivo">
+                <i class="fa-solid fa-arrow-left text-lg"></i>
+                Prev
+              </button>
+              <div class="font-semibold flex items-center">
+                Page 1 of 10
+              </div>
+              <button
+                class="border-black flex items-center gap-2 rounded-md border-[2px] py-2.5 px-5 font-semibold font-archivo">
+                Next
+                <i class="fa-solid fa-arrow-right text-lg"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="px-4 py-8">
+        <div class="max-w-4xl mx-auto">
+          <div class="flex justify-between items-center">
+            <div class="flex items-center gap-8">
+              <template x-for="item in $store.footer">
+                <button class="font-semibold flex items-center gap-2">
+                  <template x-if="item.icon">
+                    <i :class="item.icon"></i>
+                  </template>
+                  <span x-text="item.text"></span>
+                </button>
+              </template>
+            </div>
+            <div class="flex items-center">
+              <div class="border-2 border-black overflow-hidden rounded-md">
+                <button class="p-2 px-2.5 bg-[#42FF77]">
+                  <i class="fa-solid fa-sun"></i>
+                </button>
+                <button class="p-2 px-2.5 overflow-hidden">
+                  <i class="fa-solid fa-moon"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script type="module" src="/src/main.ts"></script>
+  <script type="module" src="/src/dashboard.ts"></script>
+</body>
+
+</html>
