@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite + TS</title>
+</head>
+
+<body class="bg-[#07000B]">
+  <main>
+    <div class="flex justify-center p-12">
+      <button class="coin text-4xl font-black text-white border-[5px] border-white flex justify-center items-center h-24 w-24 rounded-full">
+        $
+      </button>
+    </div>
+  </main>
+  <script type="module" src="/src/main.ts"></script>
+  <style>
+.coin {
+  box-shadow: 4px 4px 0px #07000B /*rgb(74, 74, 74)*/,
+  8px 8px 0px rgb(255, 255, 255),
+  5px 5px 60px rgb(118, 118, 118);
+  transition: box-shadow 0.25s, transform 0.25s;
+  animation: levitate 1s infinite alternate-reverse ease-in-out;
+}
+
+.coin:hover {
+  /* box-shadow: 0px 0px 0px rgb(0, 0, 0); */
+  box-shadow: 0px 0px 0px #07000B /*rgb(74, 74, 74)*/,
+  0px 0px 0px rgb(255, 255, 255),
+  0px 0px 0px rgb(118, 118, 118);
+  /* transform: translate(5px, 5px); */
+}
+
+@keyframes levitate {
+  0% {
+    transform: translateY(0px);
+  box-shadow: 4px 4px 0px #07000B /*rgb(74, 74, 74)*/,
+  8px 8px 0px rgb(255, 255, 255),
+  5px 5px 60px rgb(118, 118, 118);
+  }
+
+  100% {
+    transform: translateY(20px);
+  box-shadow: 4px 4px 0px #07000B /*rgb(74, 74, 74)*/,
+  8px 8px 0px rgb(255, 255, 255),
+  2px 2px 30px rgb(118, 118, 118);
+  }
+}
+</style>
+</body>
+
+</html>
